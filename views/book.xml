@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_booking_patient_form" model="ir.ui.view">
+        <field name="name">booking.freight.form</field>
+        <field name="model">booking.freight</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="origin"/>
+                        <field name="destination"/>
+                        <field name="date"/>
+                        <field name="gross_weight"/>
+                        <field name="volume_weight"/>
+                        <field name="chargable_weight"/>
+                        <field name="item_count"/>
+                        <field name="fare"/>
+                        <field name="consingee"/>
+                        <field name="shipper"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_booking_patient_tree" model="ir.ui.view">
+        <field name="name">booking.freight</field>
+        <field name="model">booking.freight</field>
+        <field name="arch" type="xml">
+            <!--            <h1>Booking Freight</h1>-->
+            <tree>
+                <field name="id"/>
+                <field name="origin"/>
+                <field name="destination"/>
+                <field name="date"/>
+                <field name="gross_weight"/>
+                <field name="volume_weight"/>
+                <field name="chargable_weight"/>
+                <field name="item_count"/>
+                <field name="fare"/>
+                <field name="consingee"/>
+                <field name="shipper"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_booking_patient" model="ir.actions.act_window">
+        <field name="name">Booking</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">booking.freight</field>
+        <field name="view_mode">tree, form</field>
+    </record>
+
+    <menuitem id="menu_booking_details"
+              name="Freight details"
+              action="action_booking_patient"
+              sequence="10"/>
+</odoo>

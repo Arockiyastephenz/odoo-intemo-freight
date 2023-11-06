@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_booking_root"
+    name="Freight Booking"
+    sequence="10"/>
+
+    <menuitem id="menu_booking_sub"
+    name="Booking"
+    parent = "menu_booking_root"
+    sequence="10"/>
+
+    <menuitem id="menu_booking_details"
+    name="Freight details"
+    parent = "menu_booking_root"
+    sequence="10"/>
+</odoo>
