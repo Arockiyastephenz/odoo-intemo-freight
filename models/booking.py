@@ -4,7 +4,7 @@ from odoo import api, fields, models
 from odoo.exceptions import ValidationError
 class Booking (models.Model):
     _name = "booking.freight"
-    _description = "Booking details"
+    _description = "Booking details "
 
     origin = fields.Selection([("MAA", "Chennai"), ("BOM", "Mumbai"), ("DEL", "Delhi"), ("HYD", "Hyderabad"), ("BLR", "Bangalore"), ("CCU", "Kolkata"), ("COK", "Kochi"), ("GOI", "Goa"), ("ATQ", "Amritsar"), ("IXM", "Madurai")],string='origin', required=True)
     destination = fields.Selection([("MAA", "Chennai"), ("BOM", "Mumbai"), ("DEL", "Delhi"), ("HYD", "Hyderabad"), ("BLR", "Bangalore"), ("CCU", "Kolkata"), ("COK", "Kochi"), ("GOI", "Goa"), ("ATQ", "Amritsar"), ("IXM", "Madurai")],string='destination', required=True)
